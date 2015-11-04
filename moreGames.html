@@ -1,0 +1,88 @@
+<!DOCTYPE= html>
+<html lang='en'>
+
+<!-- Cyril Vedder          Project 3 CIS 111         11/12/13 -->
+	<head>
+		<title> moreGames </title>
+		<meta charset='utf-8' >
+		<script type="text/javascript">
+			//rolls 2 dice
+			function SelectImage2() {
+
+				document.getElementById('outputDiv').innerHTML = '';
+				for ( i = 0; i < 2; i++) {
+					roll2 = Math.floor(Math.random() * 6) + 1;
+					imgName2 = '../images/die' + roll2 + '.gif';
+					document.getElementById('outputDiv').innerHTML += '<img alt="die image" src="' + imgName2 + '" />';
+				}
+
+			}
+			//rolls 3 dice
+			function SelectImage3() {
+				document.getElementById('outputDiv').innerHTML = '';
+				for ( i = 0; i < 3; i++) {
+					roll2 = Math.floor(Math.random() * 6) + 1;
+					imgName2 = '../images/die' + roll2 + '.gif';
+					document.getElementById('outputDiv').innerHTML += '<img alt="die image" src="' + imgName2 + '" />';
+				}
+
+			}
+			//rolls 4 dice
+			function SelectImage4() {
+				document.getElementById('outputDiv').innerHTML = '';
+				for ( i = 0; i < 4; i++) {
+					roll2 = Math.floor(Math.random() * 6) + 1;
+					imgName2 = '../images/die' + roll2 + '.gif';
+					document.getElementById('outputDiv').innerHTML += '<img alt="die image" src="' + imgName2 + '" />';
+				}
+
+			}
+			//rolls 5 dice
+			function SelectImage5() {
+				document.getElementById('outputDiv').innerHTML = '';
+				for ( i = 0; i < 5; i++) {
+					roll2 = Math.floor(Math.random() * 6) + 1;
+					imgName2 = '../images/die' + roll2 + '.gif';
+					document.getElementById('outputDiv').innerHTML += '<img alt="die image" src="' + imgName2 + '" />';
+				}
+
+			}
+			//rolls 6 dice
+			function SelectImage6() {
+				var theInput = document.getElementById('num').value;
+				theInput = parseInt(theInput);
+				if (theInput < 1) {
+					theInput = "1";
+				} else if (theInput > 6) {
+					theInput = "6";
+				}
+				document.getElementById('outputDiv').innerHTML = '';
+				for ( i = 0; i < theInput; i++) {
+					roll2 = Math.floor(Math.random() * 6) + 1;
+					imgName2 = '../images/die' + roll2 + '.gif';
+					document.getElementById('outputDiv').innerHTML += '<img alt="die image" src="' + imgName2 + '" />';
+				}
+
+			}
+		</script>
+	</head>
+	<body>
+
+		<div style="text-align:center">
+			<p>
+				Enter a number between 1 and 6
+			</p>
+			<input type="text" id="num">
+			<br>
+			<input type="button" value="Click to Roll" onclick="SelectImage6();">
+
+			<p id="outputDiv">
+				<img id="dieImg2" alt="die image"
+				src="../images/die2.gif" >
+
+			</p>
+
+		</div>
+
+	</body>
+</html>
